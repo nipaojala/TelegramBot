@@ -274,11 +274,14 @@ bot.hears('Sulis2', (ctx) => {
       option = option.filter(element => element === 1)
 
 
-      ctx.reply(`21.00 - 22.00 löytyy ${option.length} vapaata kenttää.
-      22.00 - 23.00 löytyy ${last.length} vapaata kenttää.\nTässä linkki varaussivustolle: ${process.env.ESPORT_URL2}`)
+      ctx.reply(`21.00 - 22.00 löytyy ${option.length} vapaata kenttää.\n22.00 - 23.00 löytyy ${last.length} vapaata kenttää.\nTässä linkki varaussivustolle: ${process.env.ESPORT_URL2}`)
 
     }
   }
+})
+bot.hears('Miten tää toimii', (ctx) => {
+  ctx.reply(`Botti näyttää tämän päivän sulisvuorot Tapiolan Esport hallilla.\nSulis: illan vuorot 21.30->\nSulis kaikki: kaikki puolen vuorot\nSulis2: illan vuorot 21.00->\nSulis2 kaikki: kaikki tasan vuorot`)
+
 })
 // new Date().toISOString().split('T')[0]
 // let lastFive = id.substr(id.length - 5);
