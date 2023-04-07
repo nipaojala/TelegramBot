@@ -99,6 +99,8 @@ request.onreadystatechange = () => {
       counter = counter + 1  
     })
     ctx.reply(`${answer}\n Tässä linkki varaussivustolle: ${process.env.ESPORT_URL}`)
+  } else {
+    ctx.reply("Esportin sivut on kiinni 00.00 - 06.00, yritä myöhemmin uudestaan.")
   }
 }
 })
@@ -139,6 +141,8 @@ bot.hears('Sulis', (ctx) => {
       last = result[14];
       last = last.filter(element => element === 1)
       ctx.reply(`21.30 - 22.30 löytyy ${last.length} vapaata kenttää. \n Tässä linkki varaussivustolle: ${process.env.ESPORT_URL}`)
+    } else {
+      ctx.reply("Esportin sivut on kiinni 00.00 - 06.00, yritä myöhemmin uudestaan.")
     }
   }
 })
@@ -189,6 +193,8 @@ bot.hears('Sulis2 kaikki', (ctx) => {
         counter = counter + 1  
       })
       ctx.reply(`${answer}\n Tässä linkki varaussivustolle: ${process.env.ESPORT_URL2}`)
+    } else {
+      ctx.reply("Esportin sivut on kiinni 00.00 - 06.00, yritä myöhemmin uudestaan.")
     }
   }
 })
@@ -236,6 +242,8 @@ bot.hears('Sulis2', (ctx) => {
 
       ctx.reply(`21.00 - 22.00 löytyy ${option.length} vapaata kenttää.\n22.00 - 23.00 löytyy ${last.length} vapaata kenttää.\nTässä linkki varaussivustolle: ${process.env.ESPORT_URL2}`)
 
+    } else {
+      ctx.reply("Esportin sivut on kiinni 00.00 - 06.00, yritä myöhemmin uudestaan.")
     }
   }
 })
@@ -243,6 +251,15 @@ bot.hears('Miten tää toimii', (ctx) => {
   ctx.reply(`Botti näyttää tämän päivän sulisvuorot Tapiolan Esport hallilla.\nSulis: illan vuorot 21.30->\nSulis kaikki: kaikki puolen vuorot\nSulis2: illan vuorot 21.00->\nSulis2 kaikki: kaikki tasan vuorot`)
 
 })
+bot.hears('Poll', (ctx) => {
+  const question = "tänää sulis"
+  options = [
+    "kyllä", "ei"
+  ]
+  chat_id = 1
+  ctx.sendPoll(question, options)
+})
+
 bot.launch();
 
 process.once('SIGINT', () => bot.stop('SIGINT'));
