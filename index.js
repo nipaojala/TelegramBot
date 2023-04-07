@@ -248,7 +248,7 @@ bot.hears('Sulis2', (ctx) => {
   }
 })
 bot.hears('Miten tää toimii', (ctx) => {
-  ctx.reply(`Botti näyttää tämän päivän sulisvuorot Tapiolan Esport hallilla.\nSulis: illan vuorot 21.30->\nSulis kaikki: kaikki puolen vuorot\nSulis2: illan vuorot 21.00->\nSulis2 kaikki: kaikki tasan vuorot`)
+  ctx.reply(`Botti näyttää tämän päivän sulisvuorot Tapiolan Esport hallilla.\nSulis: illan vuorot 21.30->\nSulis kaikki: kaikki puolen vuorot\nSulis2: illan vuorot 21.00->\nSulis2 kaikki: kaikki tasan vuorot\nKomennolla "Poll" voit luoda kyllä/ei pollin`)
 
 })
 bot.hears('Poll', (ctx) => {
