@@ -14,48 +14,6 @@ function makeHttpObject() {
 
   throw new Error("Could not create");
 }
-
-
-// function getAndSendData (props) {
-//   if (props.readyState === 4 && props.status === 200) {
-//     text = request.responseText.split('"datarow"');
-//     text.shift()
-//     text.map(element => {
-//       rows = element.split("<td")
-//       rows.map(x => {
-//         if (x.includes("white"))
-//           schedule.push(1)
-//         if (x.includes("red"))
-//           schedule.push(0)
-//       })
-//       schedule.push("väli")
-// })
-//     const result = schedule.reduce((resultArray, item, index) => { 
-//       const chunkIndex = Math.floor(index/9)
-    
-//       if(!resultArray[chunkIndex]) {
-//         resultArray[chunkIndex] = []
-//       }
-    
-//       resultArray[chunkIndex].push(item)
-    
-//       return resultArray
-//     }, [])
-    
-//     last = result
-//     last = last.map(element => (
-//       element.filter(element => element === 1)
-//       )
-//     )
-//     counter = 0
-//     times.map(element => {
-//       answer = answer + `${element} löytyy ${last[counter].length} vapaata kenttää.\n`
-//       counter = counter + 1  
-//     })
-//     ctx.reply(answer)
-
-//   }
-// }
   const times = [
     "7.30 - 8.30",
     "8.30 - 9.30",
@@ -283,9 +241,6 @@ bot.hears('Miten tää toimii', (ctx) => {
   ctx.reply(`Botti näyttää tämän päivän sulisvuorot Tapiolan Esport hallilla.\nSulis: illan vuorot 21.30->\nSulis kaikki: kaikki puolen vuorot\nSulis2: illan vuorot 21.00->\nSulis2 kaikki: kaikki tasan vuorot`)
 
 })
-// new Date().toISOString().split('T')[0]
-// let lastFive = id.substr(id.length - 5);
-// lastFive.replace()
 bot.launch();
 
 process.once('SIGINT', () => bot.stop('SIGINT'));
