@@ -1,7 +1,9 @@
 const { Telegraf } = require('telegraf');
 require('dotenv').config();
+
 const { XMLHttpRequest } = require('node-xmlhttprequest');
 const bot = new Telegraf(process.env.AUTH_TOKEN);
+
 function makeHttpObject() {
   try {
     return new XMLHttpRequest();
