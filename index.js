@@ -33,7 +33,6 @@ function makeHttpObject() {
     "20:30 - 21:30",
     "21:30 - 22:30"
   ]
-
   const times2 = [
     "7.00 - 8.00",
     "8.00 - 9.00",
