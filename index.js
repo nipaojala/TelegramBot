@@ -257,7 +257,7 @@ bot.hears('Poll', (ctx) => {
   ]
   chat_id = 1
   const is_anonymous = false
-  ctx.sendPoll(question, options, is_anonymous)
+  ctx.sendPoll(question, options)
 
 })
 
